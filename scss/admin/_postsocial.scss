@@ -1,0 +1,129 @@
+/* =============================================
+ * Navbar 
+ * 
+ * @type WebRock Object
+ * ============================================= */
+.post-social{
+    width: 100%;
+    display: block;
+    position: relative;
+    margin:0;
+
+    .post-social-title{
+        display: block;
+        position: relative;
+        &.post-social-title-vintage{
+            text-align: center;
+            margin-bottom: 50px;
+            h1,h2,h3,h4,h5,h6,p{
+                display: inline;
+                position: relative;
+                padding: 10px 30px;
+                border: 2px solid #fff;
+            }
+        }
+    }
+    .post-social-subtitle{
+        display: block;
+        position: relative;
+    }
+    .post-social-image{
+        display: block;
+        position: relative;
+    }
+
+    $post-social-xlg: 125px;
+    $post-social-lg: 100px;
+    $post-social-md: 75px;
+    $post-social-sm: 50px;
+    $post-social-xs: 25px;
+
+    &.post-social-xlg{
+        padding: $post-social-xlg 0;
+        @media screen and (max-width: $screen-md-max){
+            padding: $post-social-xlg*5/6 0;
+        }
+        @media screen and (max-width: $screen-sm-max){
+            padding: $post-social-xlg*4/6 0;
+        }
+        @media screen and (max-width: $screen-xs-max){
+            padding: $post-social-xlg*3/6 0;
+        }
+    }
+    &.post-social-lg{
+        padding: $post-social-lg 0;
+        @media screen and (max-width: $screen-md-max){
+            padding: $post-social-lg*5/6 0;
+        }
+        @media screen and (max-width: $screen-sm-max){
+            padding: $post-social-lg*4/6 0;
+        }
+        @media screen and (max-width: $screen-xs-max){
+            padding: $post-social-lg*3/6 0;
+        }
+    }
+    &.post-social-md{
+        padding: $post-social-md 0;
+        @media screen and (max-width: $screen-md-max){
+            padding: $post-social-md*5/6 0;
+        }
+        @media screen and (max-width: $screen-sm-max){
+            padding: $post-social-md*4/6 0;
+        }
+        @media screen and (max-width: $screen-xs-max){
+            padding: $post-social-md*3/6 0;
+        }
+    }
+    &.post-social-sm{
+        padding: $post-social-sm 0;
+        @media screen and (max-width: $screen-md-max){
+            padding: $post-social-sm*5/6 0;
+        }
+        @media screen and (max-width: $screen-sm-max){
+            padding: $post-social-sm*4/6 0;
+        }
+        @media screen and (max-width: $screen-xs-max){
+            padding: $post-social-sm*3/6 0;
+        }
+    }
+    &.post-social-xs{
+        padding: $post-social-xs 0;
+        @media screen and (max-width: $screen-md-max){
+            padding: $post-social-xs*5/6 0;
+        }
+        @media screen and (max-width: $screen-sm-max){
+            padding: $post-social-xs*4/6 0;
+        }
+        @media screen and (max-width: $screen-xs-max){
+            padding: $post-social-xs*3/6 0;
+        }
+    }
+
+
+}
+
+.post-social-status{
+    margin: 0px 0 0;
+    li a{
+        @include transition(all, 0.5s, ease);
+        color: $gray-light;
+        &:hover{
+            color: $gray;
+            text-decoration: none;
+        }
+    }
+}
+
+.post-social-wrapper{
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.post-social-tag{
+    color: rgba(255,255,255,0.75);
+    @include transition(all, 0.3s, ease);
+    &:hover{
+        text-decoration: none;
+        color: rgba(255,255,255,1.0);
+    }
+}

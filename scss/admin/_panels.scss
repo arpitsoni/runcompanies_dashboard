@@ -1,0 +1,134 @@
+.panel-status{
+    @include border-radius($border-radius-base);
+}
+
+
+.panel-primary {
+    border: none;
+    .panel-heading {
+        border-color: $brand-primary;
+        color: white;
+        background-color: $brand-primary;
+    }
+    a {
+        color: $brand-primary;
+        &:hover {
+            color: darken($brand-primary, 15%);
+        }
+    }
+}
+
+.panel-green {
+    border: none;
+    .panel-heading {
+        border-color: $brand-success;
+        color: white;
+        background-color: $brand-success;
+    }
+    a {
+        color: $brand-success;
+        &:hover {
+            color: darken($brand-success, 15%);
+        }
+    }
+}
+
+
+.panel-red {
+    border: none;
+    .panel-heading {
+        border-color: $brand-danger;
+        color: white;
+        background-color: $brand-danger;
+    }
+    a {
+        color: $brand-danger;
+        &:hover {
+            color: darken($brand-danger, 15%);
+        }
+    }
+}
+
+.panel-yellow {
+    border: none;
+    .panel-heading {
+        border-color: $brand-warning;
+        color: white;
+        background-color: $brand-warning;
+    }
+    a {
+        color: $brand-warning;
+        &:hover {
+            color: darken($brand-warning, 15%);
+        }
+    }
+}
+
+.panel-status{
+    overflow:hidden;
+    border-bottom: 5px solid transparent!important;
+    @include transition(border, 0.7s, ease);
+    @include border-radius(0);
+    .panel-status-icon{
+        color: $brand-primary;
+        @include transition(all, 0.3s, ease); 
+    }
+    &:hover{
+        color: darken($brand-primary, 15%);
+        border-bottom: 5px solid $brand-primary!important;
+        .panel-status-icon{
+            @include opacity(0.25);
+            @include transform(scale(2.5) rotate(15deg))
+        }
+    }
+
+    &.panel-info{
+        color: $brand-info;
+        @include transition(all, 0.3s, ease); 
+        .panel-status-icon{
+            color: $brand-info;
+        }
+        &:hover{
+            color: darken($brand-info, 15%);
+            border-bottom: 5px solid $brand-info!important;
+        }
+    }
+    
+    &.panel-danger{
+        color: $brand-danger;
+        @include transition(all, 0.3s, ease); 
+        .panel-status-icon{
+            color: $brand-danger;
+        }
+        &:hover{
+            color: darken($brand-danger, 15%);
+            border-bottom: 5px solid $brand-danger!important;
+        }
+    }
+    
+    &.panel-success{
+        color: $brand-success;
+        @include transition(all, 0.3s, ease); 
+        .panel-status-icon{
+            color: $brand-success;
+        }
+        &:hover{
+            color: darken($brand-success, 15%);
+            border-bottom: 5px solid $brand-success!important;
+        }
+    }
+    
+    &.panel-warning{
+        color: $brand-warning;
+        @include transition(all, 0.3s, ease); 
+        .panel-status-icon{
+            color: $brand-warning;
+        }
+        &:hover{
+            color: darken($brand-warning, 15%);
+            border-bottom: 5px solid $brand-warning!important;
+        }
+    }
+
+}
+
