@@ -20,6 +20,11 @@ hr {
   border: 0;
   border-top: 1px solid #EF4238;
 }
+.fs100{font-weight: 100!important;}
+.fs200{font-weight: 200!important;}
+.fs300{font-weight: 300!important;}
+.fs400{font-weight: 400!important;}
+.fsbold{font-weight:bold!important;}
 /*------------PAGE WISE STYLES-----------*/
 .login-title{
   font-weight: 400;
