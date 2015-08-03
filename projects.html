@@ -22,7 +22,8 @@
 
         <!-- MetisMenu CSS -->
         <link href="css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
-
+        <!-- DataTables CSS -->
+        <link href="css/plugins/dataTables.bootstrap.css" rel="stylesheet">
         <!-- Timeline CSS -->
         <link href="css/plugins/timeline.css" rel="stylesheet">
 
@@ -220,7 +221,7 @@
                                                     <h4 class="left-title pull-left">Project Milestone </h4>
                                                     <a href="#" class="btn btn-primary pull-right"><span class="fa fa-plus fa-1x"></span>Add Milestone</a>
                                                      <div class="table-responsive">
-                                                        <table class="table table-striped table-bordered table-hover">
+                                                        <table class="table table-striped table-bordered table-hover" id="dataTables-milestones">
                                                             <thead>
                                                                 <tr>
                                                                     <th>Milestone</th>
@@ -250,7 +251,7 @@
                                                 <div class="col-md-12">
                                                     <h4 class="left-title pull-left">Recent Messages</h4>
                                                      <div class="table-responsive">
-                                                        <table class="table table-striped table-bordered table-hover">
+                                                        <table class="table table-striped table-bordered table-hover" id="dataTables-recentmessages">
                                                             <thead>
                                                                 <tr>
                                                                     <th>Date</th>
@@ -327,6 +328,14 @@
 
         <!-- Custom Theme JavaScript -->
         <script src="js/smartech.js"></script>
+        <script src="js/plugins/dataTables/jquery.dataTables.js"></script>
+        <script src="js/plugins/dataTables/dataTables.bootstrap.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#dataTables-milestones').dataTable();
+                $('#dataTables-recentmessages').dataTable();
+            });
+        </script>
 
     </body>
     <!-- Modal -->

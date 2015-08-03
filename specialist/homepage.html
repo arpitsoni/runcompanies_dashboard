@@ -22,7 +22,8 @@
 
         <!-- MetisMenu CSS -->
         <link href="../css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
-
+        <!-- DataTables CSS -->
+        <link href="css/plugins/dataTables.bootstrap.css" rel="stylesheet">
         <!-- Timeline CSS -->
         <link href="../css/plugins/timeline.css" rel="stylesheet">
 
@@ -175,7 +176,7 @@
                                 <div class="panel-heading"><h4 class="m-0">ACTIVE TASKS</h4></div>
                                     <div class="panel-body">
                                         <div class="table-responsive">
-                                            <table class="table table-striped table-bordered table-hover">
+                                            <table class="table table-striped table-bordered table-hover" id="dataTables-activetasks">
                                                 <thead>
                                                     <tr>
                                                         <th><input type="checkbox" value=""></th>
@@ -223,7 +224,7 @@
                                 <div class="panel-heading"><h4 class="m-0">ACTIVE PROJECTS</h4></div>
                                     <div class="panel-body">
                                         <div class="table-responsive">
-                                            <table class="table table-striped table-bordered table-hover">
+                                            <table class="table table-striped table-bordered table-hover"  id="dataTables-recentmessage">
                                                 <thead>
                                                     <tr>
                                                         <th>PROJECT</th>
@@ -277,6 +278,14 @@
 
         <!-- Custom Theme JavaScript -->
         <script src="../js/smartech.js"></script>
+        <script src="../js/plugins/dataTables/jquery.dataTables.js"></script>
+        <script src="../js/plugins/dataTables/dataTables.bootstrap.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#dataTables-activetasks').dataTable();
+                $('#dataTables-recentmessage').dataTable();
+            });
+        </script>
 
     </body>
 
