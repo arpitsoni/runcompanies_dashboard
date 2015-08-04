@@ -61,3 +61,9 @@ hr {
   border-bottom-color: transparent;
   cursor: default;
 }
+
+/*timsheet page*/
+#addtimesheet .modal-dialog {
+    width: 75%;
+    margin: 30px auto;
+}
