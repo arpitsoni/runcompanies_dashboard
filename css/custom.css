@@ -11,10 +11,12 @@ body,h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {font-family: 'Roboto'
 .m-0{margin: 0px;}
 .p-0{padding: 0px!important;}
 .pright5{padding-right: 5px;}
+.pright10{padding-right: 10px;}
 .pleft5{padding-left: 5px;}
 .pbottom10{padding-bottom: 10px;}
 .ptop20{padding-top: 20px;}
 .btn span{padding-right: 5px;}
+.text-left{text-align: left!important;}
 hr {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -26,6 +28,7 @@ hr {
 .fs300{font-weight: 300!important;}
 .fs400{font-weight: 400!important;}
 .fsbold{font-weight:bold!important;}
+.lh20{line-height: 20px;}
 .dataTables_wrapper .dataTables_filter{float: right;}
 .dataTables_wrapper .pagination {
     display: inline-block;
@@ -33,6 +36,28 @@ hr {
      margin: 0px 0px 20px 0px;
     border-radius: 3px;
     float: right;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #555555;
+    background-color: rgba(236, 236, 236, 0.41);
+    background-image: none;
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 0px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+.table-hover > tbody > tr:hover > td, .table-hover > tbody > tr:hover > th {
+    background-color: whitesmoke;
+    cursor: pointer;
 }
 /*------------PAGE WISE STYLES-----------*/
 .login-title{
@@ -63,11 +88,19 @@ hr {
   cursor: default;
 }
 #overview .well{margin-bottom: 0px;}
+.project_milestone{padding: 20px 0px;}
+.editTaskmodal .form-horizontal .control-label {
+    text-align: right;
+    margin-bottom: 0;
+    padding-top: 0px;
+}
+.milestone_info h5{line-height: 20px;}
 /*timsheet page*/
-#addtimesheet .modal-dialog {
+#addtimesheet .modal-dialog, #editTask .modal-dialog,#addTask .modal-dialog {
     width: 75%;
     margin: 30px auto;
 }
 .heading_table thead th{background-color: #BBBBBB!important;}
 .heading_table tbody .headingBlock td{background-color:#F7F3D9!important;}
 .width33{width: 33%}
+

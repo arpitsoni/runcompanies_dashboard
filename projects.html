@@ -146,6 +146,7 @@
                                         <input type="text" class="form-control" placeholder="Search here...">
                                     </div>
                                     <a class="btn btn-primary"><i class="fa fa-dashboard pright5"></i>Create Project</a>
+                                    <a class="btn btn-primary"><i class="fa fa-dashboard pright5"></i>Add Milestone</a>
                                 </div>
                             </div>
                         </div>
@@ -170,6 +171,8 @@
 
                                     <!-- Tab panes -->
                                     <div class="tab-content">
+
+                                        <!-- OVERVIEW TAB STARTS -->
                                         <div class="tab-pane fade in active" id="overview">
                                             <div class="row pbottom10 ptop20">
                                                 <div class="col-md-6">
@@ -293,22 +296,274 @@
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <!-- MILESTONE TAB STARTS -->
                                         <div class="tab-pane fade" id="milestones">
-                                            <h4>Profile Tab</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                            <div class="row ptop20">
+                                                <div class="col-md-12">
+                                                    <a href="#" class="btn btn-primary pull-right">Add Milestone</a>
+                                                </div>
+                                            </div>
+                                            <div class="row project_milestone">
+                                                <div class="col-md-12">
+                                                     <div class="table-responsive">
+                                                        <table class="table table-striped table-bordered table-hover" id="dataTables-projectmilestones">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Milestone</th>
+                                                                    <th>Date</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Milestone One</td>
+                                                                    <td>12th April</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Milestone Two</td>
+                                                                    <td>12th April</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Milestone Three</td>
+                                                                    <td>12th April</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="row milestone_info">
+                                                    <div class="col-md-6">
+                                                        <h5>Milestone : <span class="fs300">Milestone Name</span></h5>
+                                                       <div class="form-group">
+                                                            <h5>Description<a href="#"  data-toggle="modal" data-target="#editTask" class="fa fa-pencil fa-1x pleft5"></a></h5>
+                                                            <textarea class="form-control" rows="3"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <h5>Milestone ID: <span class="fs300">xxxxxxxx</span></h5>
+                                                        <h5>Date Created: <span class="fs300">xxxxxxxx</span></h5>
+                                                        <h5>Date Started: <span class="fs300">xxxxxxxx</span> <a href="#" class="fa fa-pencil fa-1x pleft5"></a></h5>
+                                                        <h5>Scheduled Completion: <span class="fs300">xxxxxxxx</span> <a href="#" class="fa fa-pencil fa-1x pleft5"></a></h5>
+                                                        <h5>Actual Completion: <span class="fs300">xxxxxxxx</span> </h5>
+                                                        <form class="form-horizontal">
+                                                          <div class="form-group">
+                                                            <h5 for="inputPassword" class="col-md-4 text-left control-label">Milestone Status :</h5>
+                                                            <div class="col-sm-5 col-md-pull-1">
+                                                              <select class="form-control">
+                                                                    <option>1</option>
+                                                                    <option>2</option>
+                                                                    <option>3</option>
+                                                                    <option>4</option>
+                                                                    <option>5</option>
+                                                                </select>
+                                                            </div>
+                                                          </div>
+                                                        </form>
+                                                    </div>
+                                            </div>
+                                            <hr>
+                                            <ul class="nav nav-tabs">
+                                                <li class="active"><a href="#tasks_addtasks" data-toggle="tab">Tasks</a></li>
+                                                <li><a href="#messages_addtasks" data-toggle="tab">Messages</a></li>
+                                                <li><a href="#team_addtasks" data-toggle="tab">Attachements</a></li>
+                                            </ul>
+                                            <div class="tab-content">
+                                                <!-- OVERVIEW TAB STARTS -->
+                                                <div class="tab-pane fade in active" id="tasks_addtasks">
+                                                    <div class="row ptop20 pbottom10">
+                                                        <div class="col-md-12">
+                                                            <div class="form-group pull-left">
+                                                                <label class="pright10">Filter : </label>
+                                                                <label class="radio-inline">
+                                                                    <input type="radio" name="optionsRadiosInline" id="All" value="All" checked="">All
+                                                                </label>
+                                                                <label class="radio-inline">
+                                                                    <input type="radio" name="optionsRadiosInline" id="InProgress" value="InProgress">In Progress
+                                                                </label>
+                                                                <label class="radio-inline">
+                                                                    <input type="radio" name="optionsRadiosInline" id="Complete" value="Complete">Complete
+                                                                </label>
+                                                            </div>
+                                                            <a href="#" class="btn btn-primary pull-right"  data-toggle="modal" data-target="#addTask">Add Task</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row tasks_addtasks_table">
+                                                        <div class="col-md-12">
+                                                             <div class="table-responsive">
+                                                                <table class="table table-striped table-bordered table-hover" id="dataTables-tasks_addtasks_table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Tasks</th>
+                                                                            <th>Due Date</th>
+                                                                            <th>Assigned</th>
+                                                                            <th>Status</th>
+                                                                            <th>Action</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>Task One</td>
+                                                                            <td>12th April</td>
+                                                                            <td>User One</td>
+                                                                            <td>In Progress</td>
+                                                                            <td>
+                                                                                <a href="#" class="btn btn-info btn-circle"><i class="fa fa-pencil"></i></a>
+                                                                                <a href="#" class="btn btn-info btn-circle"><i class="fa fa-check"></i></a>
+                                                                                <a href="#" class="btn btn-info btn-circle"><i class="fa fa-trash-o"></i></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Task Two</td>
+                                                                            <td>12th April</td>
+                                                                            <td>User One</td>
+                                                                            <td>In Progress</td>
+                                                                            <td>
+                                                                                <a href="#" class="btn btn-info btn-circle"><i class="fa fa-pencil"></i></a>
+                                                                                <a href="#" class="btn btn-info btn-circle"><i class="fa fa-check"></i></a>
+                                                                                <a href="#" class="btn btn-info btn-circle"><i class="fa fa-trash-o"></i></a>
+                                                                            </th>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Task Three</td>
+                                                                            <td>12th April</td>
+                                                                            <td>User One</td>
+                                                                            <td>In Progress</td>
+                                                                            <td>
+                                                                                <a href="#" class="btn btn-info btn-circle"><i class="fa fa-pencil"></i></a>
+                                                                                <a href="#" class="btn btn-info btn-circle"><i class="fa fa-check"></i></a>
+                                                                                <a href="#" class="btn btn-info btn-circle"><i class="fa fa-trash-o"></i></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
+
+                                        <!-- TASKS TAB STARTS -->
                                         <div class="tab-pane fade" id="tasks">
                                             <h4>Messages Tab</h4>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                                         </div>
+
+                                        <!-- MESSAGES TAB STARTS -->
                                         <div class="tab-pane fade" id="messages">
                                             <h4>Settings Tab</h4>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                                         </div>
+
+                                        <!-- TEAM TAB STARTS -->
                                         <div class="tab-pane fade" id="team">
-                                            <h4>Settings Tab</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                            <div class="row ptop20">
+                                                <div class="col-md-12">
+                                                	<h4 class="pull-left">Project Team : <span class="fs300">U_TEAM.TEAM_ID</span></h4>
+                                                    <a href="#" class="btn btn-primary pull-right">Add Member</a>
+                                                </div>
+                                            </div>
+                                            <div class="row team_member_box">
+                                                <div class="col-md-12">
+                                                     <div class="table-responsive">
+                                                        <table class="table table-striped table-bordered table-hover" id="dataTables-projectmilestones">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>User</th>
+                                                                    <th>Name</th>
+                                                                    <th>Status</th>
+                                                                    <th>Actions</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+	                                                                 <td>User One</td>
+	                                                                 <td>Mark Sims</td>
+	                                                                 <td>Administrator</td>
+		                                                              	<td>
+		                                                                 <a href="#" class="btn btn-info btn-circle"><i class="fa fa-pencil"></i></a>
+		                                                                 <a href="#" class="btn btn-info btn-circle"><i class="fa fa-times"></i></a>
+		                                                             	</td>
+                                                                </tr>
+                                                                <tr>
+	                                                                 <td>User One</td>
+	                                                                 <td>Mark Sims</td>
+	                                                                 <td>Administrator</td>
+		                                                              	<td>
+		                                                                 <a href="#" class="btn btn-info btn-circle"><i class="fa fa-pencil"></i></a>
+		                                                                 <a href="#" class="btn btn-info btn-circle"><i class="fa fa-times"></i></a>
+		                                                             	</td>
+                                                                </tr>
+                                                                <tr>
+	                                                                 <td>User One</td>
+	                                                                 <td>Mark Sims</td>
+	                                                                 <td>Administrator</td>
+		                                                              	<td>
+		                                                                 <a href="#" class="btn btn-info btn-circle"><i class="fa fa-pencil"></i></a>
+		                                                                 <a href="#" class="btn btn-info btn-circle"><i class="fa fa-times"></i></a>
+		                                                             	</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="row ptop10 pbottom10">
+                                                	<h4 class="col-md-3">User : <span class="fs300">User 2</span></h4>
+                                                	<h4 class="col-md-6">Name : <span class="fs300">CI_PER_NAME.PER_FULLNAME</span></h4>
+                                                	<h4 class="col-md-2">Status : <span class="fs300">xxxxxx</span></h4>
+                                            </div>
+                                            <div class="row team_memberedit_box">
+                                                <div class="col-md-12">
+                                                     <div class="table-responsive">
+                                                        <table class="table table-striped table-bordered table-hover" id="dataTables-projectmilestones">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Object</th>
+                                                                    <th>No Access</th>
+                                                                    <th>Read</th>
+                                                                    <th>Write</th>
+                                                                    <th>Delete</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+	                                                                 <td>Milestone</td>
+	                                                                 <td><input type="checkbox"></td>
+	                                                                 <td><input type="checkbox"></td>
+	                                                                 <td><input type="checkbox"></td>
+	                                                                 <td><input type="checkbox"></td>
+                                                                </tr>
+                                                                <tr>
+	                                                                 <td>Tasks</td>
+	                                                                 <td><input type="checkbox"></td>
+	                                                                 <td><input type="checkbox"></td>
+	                                                                 <td><input type="checkbox"></td>
+	                                                                 <td><input type="checkbox"></td>
+                                                                </tr>
+                                                                <tr>
+	                                                                 <td>Messages</td>
+	                                                                 <td><input type="checkbox"></td>
+	                                                                 <td><input type="checkbox"></td>
+	                                                                 <td><input type="checkbox"></td>
+	                                                                 <td><input type="checkbox"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row  pull-right">
+                                            	<div class="col-md-12">
+                                            		<a href="#" class="btn btn-primary ">Update</a>
+                                            		<a href="#" class="btn btn-default">Cancel</a>
+                                            	</div>
+                                            </div>
                                         </div>
+
                                     </div>
                                 </div>
                             </div> 
@@ -342,11 +597,12 @@
             $(document).ready(function() {
                 $('#dataTables-milestones').dataTable();
                 $('#dataTables-recentmessages').dataTable();
+                $('#dataTables-projectmilestones').dataTable();
             });
         </script>
 
     </body>
-    <!-- Modal -->
+    <!-- Search Click Modal -->
     <div class="modal fade" id="categoryproject" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -408,6 +664,121 @@
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             <button type="button" class="btn btn-primary">Select Project</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Edit Task  Modal -->
+    <div class="modal fade" id="editTask" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Run Companies - Edit Task</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <h5>Project Name : <span class="fs300"> xxxx</span></h5>
+                    
+                </div>
+                <h5 class="col-md-4">Milestone : <span class="fs300"> xxxx</span></h5>
+                <h5 class="col-md-8">Scheduled Completion Date : <span class="fs300"> xxxx</span></h5>
+            </div>
+            <hr>
+            <div class="row editTaskmodal">
+                <div class="col-md-8">
+                    <h5 class="col-md-3">Task Id : <span class="fs300"> xxxx</span></h5>
+                    <form class="form-horizontal col-md-9">
+                      <div class="form-group">
+                        <h5 for="inputPassword" class="col-md-4 text-left control-label">Task Name:</h5>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" placeholder="Task Name">
+                        </div>
+                      </div>
+                    </form>
+                    <div class="form-group col-md-12">
+	                       <label>Description</label>
+	                       <textarea class="form-control" rows="3"></textarea>
+	                   </div>
+                </div>
+                <div class="col-md-4">
+                    <h5>Creation Date : <span class="fs300"> xxxx</span></h5>
+                    <h5>Start Date : <span class="fs300"> xxxx</span><a href="#" class="fa fa-pencil pleft5"></a></h5>
+                    <h5>Scheduled Completion : <span class="fs300"> xxxx</span><a href="#" class="fa fa-pencil pleft5"></a></h5>
+                    <h5>Actual Completion : <span class="fs300"> xxxx</span></h5>
+                    <h5>Task Rate : <span class="fs300"> $xxxx/hr</span><a href="#" class="fa fa-pencil pleft5"></a></h5>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-12">
+                    <h5>Assigned To : <span class="fs300"> User 1</span></h5>
+                </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary">Complete</button>
+            <button type="button" class="btn btn-primary">Update</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add Task  Modal -->
+    <div class="modal fade" id="addTask" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Run Companies - Add Task</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <h5>Project Name : <span class="fs300"> xxxx</span></h5>
+                    
+                </div>
+                <h5 class="col-md-4">Milestone : <span class="fs300"> xxxx</span></h5>
+                <h5 class="col-md-8">Scheduled Completion Date : <span class="fs300"> xxxx</span></h5>
+            </div>
+            <hr>
+            <div class="row addTaskmodal">
+                <div class="col-md-8">
+                    <h5 class="col-md-3">Task Id : <span class="fs300"> xxxx</span></h5>
+                    <form class="form-horizontal col-md-9">
+                      <div class="form-group">
+                        <h5 for="inputPassword" class="col-md-4 text-left control-label">Task Name:</h5>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" placeholder="Task Name">
+                        </div>
+                      </div>
+                    </form>
+                    <div class="form-group col-md-12">
+	                       <label>Description</label>
+	                       <textarea class="form-control" rows="3"></textarea>
+	                   </div>
+                </div>
+                <div class="col-md-4">
+                    <h5>Creation Date : <span class="fs300"> xxxx</span></h5>
+                    <h5>Start Date : <span class="fs300"> xxxx</span><a href="#" class="fa fa-pencil pleft5"></a></h5>
+                    <h5>Scheduled Completion : <span class="fs300"> xxxx</span><a href="#" class="fa fa-pencil pleft5"></a></h5>
+                    <h5>Actual Completion : <span class="fs300"> xxxx</span></h5>
+                    <h5>Task Rate : <span class="fs300"> $xxxx/hr</span><a href="#" class="fa fa-pencil pleft5"></a></h5>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-12">
+                    <h5>Assigned To : <span class="fs300"> User 1</span></h5>
+                </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary">Submit</button>
           </div>
         </div>
       </div>
